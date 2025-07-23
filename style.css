@@ -1,0 +1,34 @@
+h1{
+    color: rgb(216, 7, 7);
+    text-align: center;
+    
+}
+
+
+.carousel-item{
+  animation-duration: 5ms;
+  width: 10000%;
+  height: 300px;         
+  /*  La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+  background-size:cover;
+   /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+background-position: center center;
+   /* Para que la imagen de fondo no se repita */
+   background-repeat: no-repeat;
+   /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+ background-attachment: fixed;                      
+}
+@media (max-width: 10000%) {
+  .carousel-item {
+    height: 200px;
+    text-align: center;
+  }
+}
+
+.icono{
+  height: 100px;
+}
+
+img{
+  gap: 500px;
+}
