@@ -5,10 +5,10 @@ const navGeneral = `
     <div class=menu-cont id="menu">
       <button class="btn-cerrar" id="cerrar"><i class="bi bi-x"></i></button>    
       <ul class="nav-list">
-        <li><a href="#">Inicio</a></li>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Feedback</a></li>
         <li><a href="#">Calculadora</a></li>
-        <li><a href="#">Proyecto</a></li>
-        <li><a href="#">Contacto</a></li>
       </ul>
     </div>
   </div>
