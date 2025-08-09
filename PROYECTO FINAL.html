@@ -126,13 +126,65 @@
     <p>Esta energía se aprovecha directamente del sol, no es necesario utilizar ningún dispositivo eléctrico para
       transformar una corriente a otra y para acumular la energía, esta energia es fundamental del ecodiseño y la
       arquictetura bioclimática.</p>
-  </main>
 
+<!-- Botón para abrir el modal -->
+<div class="text-center my-4">
+    <button type="button" class="btn btn-solar" data-bs-toggle="modal" data-bs-target="#formularioEnergia">
+        💡 Calcular mi energía solar
+    </button>
+</div>
 
+<!-- Modal personalizado -->
+<div class="modal fade custom-modal" id="formularioEnergia" tabindex="-1" aria-labelledby="formularioEnergiaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-animado">
+            <!-- Encabezado del modal -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="formularioEnergiaLabel">Calculadora de Energía Solar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
 
+            <!-- Cuerpo del modal con formulario -->
+            <div class="modal-body">
+                <form id="solarForm">
+                    <!-- Consumo en kWh -->
+                    <div class="mb-3">
+                        <label for="consumo" class="form-label">Consumo mensual (kWh)</label>
+                        <input type="number" class="form-control" id="consumo" placeholder="Ej: 350" required>
+                    </div>
 
+                    <!-- Precio por kWh -->
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Precio por kWh (COP)</label>
+                        <input type="number" class="form-control" id="precio" placeholder="Ej: 650" required>
+                    </div>
 
+                    <!-- Horas de sol al día -->
+                    <div class="mb-3">
+                        <label for="horasSol" class="form-label">Horas de sol al día</label>
+                        <input type="number" class="form-control" id="horasSol" placeholder="Ej: 5" required>
+                    </div>
 
+                    <!-- Resultado -->
+                    <div id="resultado" class="alert alert-success mt-3 d-none"></div>
+
+                    <!-- Botón calcular -->
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-calcular">Calcular</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Pie del modal -->
+            <div class="modal-footer">
+                <small class="text-muted">💚 Energía limpia para un futuro mejor</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Js.js"></script>
 
 
 </body>
