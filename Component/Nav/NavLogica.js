@@ -8,7 +8,7 @@ const navGeneral = `
         <li><a href="#home">Inicio</a></li>
         <li><a href="#">Dashboard</a></li>
         <li><a href="#">Feedback</a></li>
-        <li><a href="#">Calculadora</a></li>
+        <li class="btn-calculadora"><a href="#calculadora">Calculadora</a></li>
       </ul>
     </div>
   </div>

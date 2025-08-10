@@ -1,15 +1,40 @@
-h1{
-    color: rgb(216, 7, 7);
-    text-align: center;
-    
+/* 🎨 Colores personalizados */
+:root {
+  --primary-color: #ffcc00;
+  --secondary-color: #004d40;
+  --background-modal: rgba(0, 0, 0, 0.7);
+  font-family: "Poppins", sans-serif;
+  --background-color: #FFF8E1;
 }
-.cont-1{
-  width: 100%;
-  height: 85vh;
+body{
+  background-color: var(--background-color) !important;
+  padding: 0;
+  margin: 0;
+}
+.cont-home{
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 1rem;
+}
+.text-home{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.title-home{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.parrafo-home{
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 .carousel-item{
   animation-duration: 5ms;
-  width: 10000%;
+  width: 100%;
   height: 85vh;      
   /*  La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
   background-size:cover;
@@ -20,26 +45,46 @@ background-position: center center;
    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
  background-attachment: fixed;                      
 }
-@media (max-width: 10000%) {
-  .carousel-item {
-    height: 200px;
-    text-align: center;
-  }
+
+.cont{
+  padding: 4rem;
+}
+.title1{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.subtitle1{
+  padding: .5rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.col_1{
+  background-color: #4CAF50;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+.col_2{
+  background-color: #5377A6;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+.col_3{
+  background-color: #ffb347;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+.desc-title{
+  margin-top: 1rem;
+  color: #20252B;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.description{
+  color:#F7F8FC;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
-.icono{
-  height: 100px;
-}
-
-img{
-  gap: 500px;
-}
-/* 🎨 Colores personalizados */
-:root {
-  --primary-color: #ffcc00;
-  --secondary-color: #004d40;
-  --background-modal: rgba(0, 0, 0, 0.7);
-}
 
 /* Botón personalizado */
 .btn-custom {
@@ -82,7 +127,7 @@ img{
 .btn-solar {
     background: linear-gradient(45deg, #ffb347, #ffcc33);
     color: #fff;
-    font-weight: bold;
+    font-weight: 400;
     padding: 12px 25px;
     border-radius: 50px;
     box-shadow: 0px 4px 15px rgba(255, 179, 71, 0.5);
@@ -121,4 +166,40 @@ img{
 .btn-calcular:hover {
     background: linear-gradient(90deg, #388E3C, #66BB6A);
     transform: scale(1.05);
+}
+.btn-go-Up{
+  display: block;
+  margin-left: auto;
+  margin-right: 1rem;
+  border: none;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: transparent;
+  transition: transform 0.3s ease, color 0.3s ease;
+  &:hover{
+    color:#ffb347;
+    transform: scale(1.2);
+  }
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 3px;
+  bottom: none;
+  padding: 0.5rem;
+  font-size: .8rem;
+  backdrop-filter: blur(10px);
+  .footer-icon{
+    margin-left: .5rem;
+    color: lightcoral;
+  }
+}
+
+@media (max-width: 10000%) {
+  .carousel-item {
+    height: 200px;
+    text-align: center;
+  }
 }

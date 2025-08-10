@@ -25,3 +25,6 @@ document.getElementById('solarForm').addEventListener('submit', function(e) {
     `;
     resultadoDiv.classList.remove('d-none');
 });
+function backGoToUp() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
