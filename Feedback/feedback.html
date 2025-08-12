@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+
+    <link rel="stylesheet" href="../Component/Nav/Nav.css"><!--Estilos para el Nav-->
+    <!--Implementación de Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Fin implementación Bootstrap-->
+    
+    <!--Fuentes-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <!--Fin fuentes-->
+
+    <!--Estilos-->
+    <link rel="stylesheet" href="../Inicio/style.css">
+    <link rel="stylesheet" href="feedback.css">
+    <!--Fin estilos-->
+</head>
+<body>
+    <header id="home">
+        <script src="../Component/Nav/NavLogica.js"></script><!-- Script para el Nav-->
+        <nav id="nav-logica"></nav>
+    </header>
+    <main>
+        <form action="">
+            <div class="section">
+                <div class="name-section">
+                    <p class="section-subtitle">Quedamos a su disposición</p>
+                    <p class="section-title">Sugerencias</p>
+                </div>
+                <div class="contact-cont">
+                    <div class="contact-form">
+                        <input required name="title-sugerencia" id="title-sugerencia" type="text" class="input" placeholder="Titulo"/> <br>
+                        <textarea required name="message" id="message" placeholder="Mensaje"></textarea> <br>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary btn-md"  onclick="alertForm(event)">Enviar</button>
+
+                    <!--Modal-->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalMessageLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalMessageLabel"></h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" id="modalMessageBody"></div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+    <div id="section-footer"></div>
+    <footer>
+        <p>Code by Angélica Sánchez, Camilo Correa y Luis Gonzalez<svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-icon lucide-code"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></p> 
+        <button type="button" class=" btn-go-Up" onclick="backGoToUp()"> <i class="bi bi-arrow-up"></i></button>
+    </footer>
+
+    <script src="Js.js"></script>
+    <script src="feedback.js"></script>
+</body>
+</html>
